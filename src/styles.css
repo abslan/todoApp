@@ -1,0 +1,237 @@
+
+
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    text-align: center;
+    overflow: scroll;
+}
+
+body::-webkit-scrollbar { 
+    display: none; 
+}
+
+main{
+    width: 80vw;
+    min-width: 250px;
+    margin: auto;
+    border: 1px solid whitesmoke; 
+    border-bottom: 0px;
+    box-shadow: 0px 0px 6px 4px rgba(8, 3, 32, 0.3);
+    overflow: scroll;
+}
+
+header{
+    font-weight: 700;
+    color: black;
+    text-shadow: 2px 5px 5px rgba(16,16,16,0.4);
+
+}
+
+section{
+    margin: auto;
+    margin-top: 1rem;
+    border-bottom: 1px solid whitesmoke;
+}
+
+
+
+/* TODO LIST */
+
+#todo-list{
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0px;
+    margin-bottom: 1rem;
+}
+
+#todo-list li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+
+#todo-list li{
+    list-style: none;
+    display: inline-block;
+    width: 80%;
+    margin: auto;
+}
+
+.todo-item-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.btn-delete{
+    all: unset;
+    cursor: pointer;
+}
+
+
+
+.checkbox-round {
+    width: 1.4em;
+    height: 1.4em;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #7064e5;
+    -webkit-appearance: none;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    background-color: rgb(160, 236, 160);
+}
+
+.checkbox-round:checked {
+    background-color: rgb(160, 236, 160);
+    text-decoration: line-through;
+}
+
+.checkbox-round:checked + p{
+    text-decoration: line-through;
+    color: grey;
+}
+
+.checkbox-round:checked::before{
+    content: ' \2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #7064e5;
+}
+
+
+/* FORM */
+#todo-form-footer{
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+}
+
+#todo-form-footer span{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#todo-form label{
+    position: relative;
+}
+
+#todo-form label:before {
+    content: "";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 20px;
+    bottom: 0;
+    width: 1rem;
+    height: 1rem;
+    background: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"/></svg> ')  no-repeat;
+  }
+
+
+
+#todo-input{
+    background: #f4f6f8!important;
+    border: 1px solid #7064e5;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #7064e5!important;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    outline: none;
+    padding: 12px;
+    width: 50vw;
+    margin: auto;
+    text-align: center;
+}
+
+#todo-input::placeholder{
+    text-align: center;
+}
+
+
+#tasks-info-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10%;
+    margin: 0px;
+}
+
+#tasks-filter-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.text-black{
+    color: black;
+}
+
+#tasks-info-container p{
+    margin: 10px;
+    color: gray;
+}
+
+#tasks-filter-options p{
+    cursor: pointer;
+}
+
+p, #todo-input, span{
+    font-size: medium;
+}
+
+@media only screen and (max-width: 500px) {
+
+    p, #todo-input, span{
+        font-size: small;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+
+    p, #todo-input, span{
+        font-size: xx-small;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    #todo-form label{
+        visibility: hidden;
+    }
+
+    p, #todo-input, span{
+        font-size: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
